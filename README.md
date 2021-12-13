@@ -2,7 +2,12 @@
 <p align="center">
     <img src="http://dacom.cm.utfpr.edu.br:88/sd/lib/exe/fetch.php?cache=&media=redis_logo.png"/>
 </p>
-Cache com redis com replicação e alta disponibilidade.
+Cache redis com replicação e alta disponibilidade.
+O sistema proposto para este trabalho se encontra na Figura 1
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Jmallone/redis-cache-sentinel/main/Sistema_de_cache.png"/>
+    Figura 1 - Arquitetura para o sistema de cache.
+</p>
 
 ## Sumário
 - [redis-cache-sentinel](#redis-cache-sentinel)
@@ -101,6 +106,14 @@ Para usar o projeto node entre no repositorio e digite o seguinte comando
 ```
 npm install
 ```
+
+Terá que mudar o ip e a porta nos arquivos *index.js*, *populando_banco.js* e *teste_1.js*
+
+Vocẽ terá que ter uma tabela chamada *redis_sd* no seu banco de dados, configure os arquivos *populando_banco.js* e *index.js* e logo em seguida execute:
+```
+node populando_banco.js
+```
+para inserir valores testes na tabela redis_sd no mysql.
 
 E para executar
 ```
